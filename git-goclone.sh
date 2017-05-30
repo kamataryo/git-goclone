@@ -6,6 +6,10 @@ if [ ! -d $GOPATH ]; then
   exit 1
 fi
 
+
+
+# bash option parser originated at http://qiita.com/b4b4r07/items/dcd6be0bb9c9185475bb
+# NOTE: But simply wanna get if commanded `git clone` has optional output directory.
 PROGNAME=$(basename $0)
 VERSION="1.0"
 
@@ -76,5 +80,3 @@ if [ -z $param ]; then
     echo "Try '$PROGNAME --help' for more information." 1>&2
     exit 1
 fi
-
-echo $param[@]
